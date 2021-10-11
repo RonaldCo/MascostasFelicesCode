@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "QwIUQAmoKasy+jWUVQup4azpn+vKpZXt9UOj+88qb5QnfnObHyR6mAQ4pdSHE33AqmcdwtISabaG4xa2e+O0mg==",
+  "success": true,
+  "projectFilePath": "C:\\ProyectoMascota\\MascotaEpets.app\\MascotaEpets.app.Servicios\\MascotaEpets.app.Servicios.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mipc0\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\mipc0\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\mipc0\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\mipc0\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\mipc0\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\mipc0\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

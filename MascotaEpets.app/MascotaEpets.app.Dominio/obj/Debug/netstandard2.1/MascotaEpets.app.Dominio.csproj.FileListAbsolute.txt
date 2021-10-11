@@ -1,0 +1,5 @@
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Dominio\obj\Debug\netstandard2.1\MascotaEpets.app.Dominio.csproj.AssemblyReference.cache
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Dominio\obj\Debug\netstandard2.1\MascotaEpets.app.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Dominio\obj\Debug\netstandard2.1\MascotaEpets.app.Dominio.AssemblyInfoInputs.cache
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Dominio\obj\Debug\netstandard2.1\MascotaEpets.app.Dominio.AssemblyInfo.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Dominio\obj\Debug\netstandard2.1\MascotaEpets.app.Dominio.csproj.CoreCompileInputs.cache
