@@ -11,9 +11,7 @@ namespace MascotaEpets.app.Dominio
     [Table("PropietariosDb")]
     public class PropietarioMascota:Persona
     {
-        [Required]
-        [Column("IdPropietarioMascota")]
-        public int IdPropietarioMascota { get; set; }
+       
 
         [ForeignKey("IdMascota")]
         public virtual Mascota Mascota { get; set; }
