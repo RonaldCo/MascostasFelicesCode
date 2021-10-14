@@ -1,4 +1,4 @@
-using MascotaEpets.app.Dominio;
+/* using MascotaEpets.app.Dominio;
 using System.Collections.Generic;
 using System.Linq;
 namespace MascotaEpets.app.Persistencia.AppRepositorios
@@ -37,7 +37,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
             {
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                
-                var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdMedicoVeterinario==IdMedicoVeterinario select p);
+                var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdPersona ==IdMedicoVeterinario select p);
                 if(!(BuscarMedico==null)) {
                     contexto.medicoVeterinario.Remove(BuscarMedico);
                     contexto.SaveChanges();
@@ -66,7 +66,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
             {
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                  
-                 var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdMedicoVeterinario==medicoVeterinario.IdMedicoVeterinario select p);
+                 var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdPersona =medicoVeterinario.IdMedicoVeterinario select p);
                  if(!(BuscarMedico==null)) {
                      BuscarMedico.Nombres=medicoVeterinario.Nombres;
                      BuscarMedico.TarjetaProfesional=medicoVeterinario.TarjetaProfesional;
@@ -116,7 +116,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                 
                 //con linq
-                 var listaMedicos=(from p in contexto.medicoVeterinario where p.IdMedicoVeterinario==IdMedicoVeterinario select p).First();
+                 var listaMedicos=(from p in contexto.medicoVeterinario where p.IdPersona==IdMedicoVeterinario select p).First();
                  return listaMedicos;
 
 
@@ -132,4 +132,4 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 
     }
 
-}    
+}    */

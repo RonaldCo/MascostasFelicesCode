@@ -11,9 +11,7 @@ namespace MascotaEpets.app.Dominio
     [Table("RegistroMedicoDb")]
     public class RegistroMedico
     {
-        [Key]
-        [Column("IdRegistroM")]
-        public int IdRegistroMedico { get; set; }
+       
 
         [Required]
         [Column("Recomendaciones")]
@@ -31,6 +29,10 @@ namespace MascotaEpets.app.Dominio
 
         [ForeignKey("IdMedico")]
         public virtual MedicoVeterinario MedicoVeterinario { get; set; }
+        
+         [Key]
+        [Column("IdRegistroM")]
+        public int IdRegistroMedico { get; set; }
         
 
     
