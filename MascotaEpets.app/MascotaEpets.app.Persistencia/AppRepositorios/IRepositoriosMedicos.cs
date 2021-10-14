@@ -1,4 +1,4 @@
-using MascotaEpets.app.Dominio;
+/*using MascotaEpets.app.Dominio;
 using System.Collections.Generic;
 namespace MascotaEpets.app.Persistencia.AppRepositorios
 {
@@ -11,4 +11,4 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         MedicoVeterinario ConsultarMedicos(int IdMedicoVeterinario);
 
     }
-}
+}*/

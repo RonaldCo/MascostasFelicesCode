@@ -29,12 +29,11 @@ namespace MascotaEpets.app.Dominio
 
         [ForeignKey("IdMedico")]
         public virtual MedicoVeterinario MedicoVeterinario { get; set; }
-        
+
          [Key]
         [Column("IdRegistroM")]
         public int IdRegistroMedico { get; set; }
         
-
     
     }
 }
