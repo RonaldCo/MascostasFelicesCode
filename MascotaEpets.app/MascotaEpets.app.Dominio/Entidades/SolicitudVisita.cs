@@ -39,7 +39,6 @@ namespace MascotaEpets.app.Dominio
         [ForeignKey("IdMascota")]
         public virtual Mascota Mascota { get; set; }
 
-        [ForeignKey("IdHistoria")]
-        public virtual HistoriaMedica HistoriaMedica { get; set; }
+    
     }
 }

@@ -6,11 +6,8 @@ namespace MascotaEpets.app.Persistencia.AppData
 {
     public class EfAppContext:DbContext
     {
-        public DbSet<Persona> persona { get; set; }
 
         public DbSet<Empresa> empresa { get; set; }
-
-        public DbSet<HistoriaMedica> historiaMedica { get; set; }
 
         public DbSet<Mascota> mascota { get; set; }
 

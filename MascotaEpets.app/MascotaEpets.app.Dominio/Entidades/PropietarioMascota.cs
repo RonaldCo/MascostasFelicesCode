@@ -12,9 +12,6 @@ namespace MascotaEpets.app.Dominio
     public class PropietarioMascota:Persona
     {
        
-
-        [ForeignKey("IdMascota")]
-        public virtual Mascota Mascota { get; set; }
         
         [Required]
         [Column("Direccion")]
@@ -29,6 +26,9 @@ namespace MascotaEpets.app.Dominio
         [Required]
         [Column("CantidadMascotas")]
         public int CantidadMascota { get; set; }
+
+        [ForeignKey("IdMascota")]
+        public virtual Mascota Mascota { get; set; }
         
     }
 }
