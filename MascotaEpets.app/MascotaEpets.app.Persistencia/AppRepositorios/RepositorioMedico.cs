@@ -1,9 +1,12 @@
-using MascotaEpets.app.Dominio;
+/*using MascotaEpets.app.Dominio;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+
+
 namespace MascotaEpets.app.Persistencia.AppRepositorios
 {
-     public class RepositoriosMedico:IRepositoriosMedicos
+     public class RepositorioMedico:IRepositorioMedico
     {
         bool valorRetorno=false;
         //Ingresar Informacion del medico
@@ -25,7 +28,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
             }
             catch (Exception ex)
             {
-                string error=ex;
+                string error=ex.Message;
             }
 
                
@@ -49,7 +52,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
             }
             catch (Exception ex)
             {
-                 string error=ex;
+                 string error=ex.Message;
             }
         
         }
@@ -70,7 +73,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
                  if(!(BuscarMedico==null)) {
                      BuscarMedico.Nombres=medicoVeterinario.Nombres;
                      BuscarMedico.TarjetaProfesional=medicoVeterinario.TarjetaProfesional;
-                     bool valorRetorno=true;
+                     valorRetorno=true;
 
                  }
                  return valorRetorno;
@@ -78,7 +81,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
             }
             catch (Exception ex)
             {
-               string error=ex;
+               string error=ex.Message;
             }
         }
        #endregion
@@ -86,7 +89,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
        
         // Consultar todos los Medicos (lista)
         public IEnumerable<MedicoVeterinario> ConsultarMedicos(){
-
+            
             try
             {
                 //var lista de medicos
@@ -100,11 +103,11 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
                  var listaMedicos=(from p in contexto.medicoVeterinario select p).ToList();
                  return listaMedicos;
              }
-   
+                
             }
             catch (Exception ex)
             {
-                 string error=ex;
+                 string error=ex.Message;
             }
              
         }
@@ -124,7 +127,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
             }
             catch (Exception ex)
             {
-                 string error=ex;
+                 string error=ex.Message;
             }
             
             
@@ -132,4 +135,4 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 
     }
 
-}   
+}   */
