@@ -12,7 +12,20 @@ namespace MascotaEpets.app.Dominio
 
     public class MedicoVeterinario:Persona
     {
-     
+        [Column("IdMedico")]
+        [Key]
+        public int IdMedico { get; set; }
+
+        [Required]
+        [Column("Nombre")]
+        [StringLength(30,MinimumLength=5)]
+        public string Nombres { get; set; }
+
+        [Required]
+        [Column("Apellido")]
+        [StringLength(30,MinimumLength=5)]
+        public string Apellidos { get; set; }
+
         [Required]
         [Column("TarjetaProfesional")]
         public int TarjetaProfesional { get; set; }
@@ -21,10 +34,10 @@ namespace MascotaEpets.app.Dominio
         [ForeignKey("IdAnimal")]
         public virtual TipoAnimal TipoAnimal{ get; set; }
 
-        [ForeignKey("IdEmpresa")]
+        //[ForeignKey("IdEmpresa")]
         public virtual Empresa Empresa{ get; set; }
 
-        [ForeignKey("IdSolicitud")]
+        //[ForeignKey("IdSolicitud")]
         public virtual SolicitudVisita SolicitudVisita{ get; set; }
 
       
