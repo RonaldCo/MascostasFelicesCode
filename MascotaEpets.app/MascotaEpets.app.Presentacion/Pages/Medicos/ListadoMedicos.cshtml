@@ -1,4 +1,80 @@
 ﻿@page
 @model MascotaEpets.app.Presentacion.Pages.ListadoMedicosModel
 @{
+
+    
 }
+ 
+
+<div id="Principal" style="width: 100%; display: table;">
+    <div id="Celda1" style=" border:beige 1px solid;width:50%;display:table-cell;">
+        <h1>Registro Medico</h1>
+        </hr>
+     <form >
+         <input type="text" placeholder="Ingrese Nombre">
+         <button type="button" class="btn btn-primary"  title="Registro Medico">Registrar</button>
+         <button type="button" class="btn btn-primary"  title="Actualizar Medico">Actualizar</button>
+         <input type="text" placeholder="Ingrese Apellido">
+         <input type="text" placeholder="Ingrese Cedula">
+         <input type="text" placeholder="Ingrese Telefono">
+         <input type="text" placeholder="Ingrese Tarjeta Profesional">
+      </form>
+    </div>
+    <div id="Celda2" style=" border:beige 1px solid;width:50%;display:table-cell">
+         <h1>Listado de Medicos</h1>
+         <table clase="table table-bordered">
+             <thead>
+             <tr>
+                <th>
+                    1
+                </th>
+                <th>
+                    ID MEDICO
+                </th>
+                <th>
+                    NOMBRES
+                </th>
+                <th>
+                   CEDULA
+                </th>
+                <th>
+                   TARJETA PROPIEDAD
+                </th>
+                </thead>
+                <th>
+                    <div>
+                        <img src="~/img/delete.png" width="20px" onclick="MensajeEliminar();">
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <img src="~/img/update.png" width="20px" onclick="MensajeActualizar();">
+                    </div>
+                </th>
+                <th>
+                   <a href="https://www.youtube.com/">Visita youtube</a>
+                </th>
+                <th>
+                   <a class="btn btn-primary table-btn">boton</a>
+                </th>
+             </tr>
+         </table>
+    </div>
+
+</div>
+
+<script>
+    function MensajeEliminar(){
+
+    confirm("¿Estas Seguro de Eliminar el registro? ");
+
+
+    function MensajeActualizar(){
+      
+      confirm("¿Estas Seguro de Actualizar el registro? ");
+
+    }
+}
+</script>
+
+ 

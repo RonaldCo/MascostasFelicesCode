@@ -15,4 +15,3 @@ C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Persistencia\obj\Debug\net5
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Persistencia\obj\Debug\net5.0\MascotaEpets.app.Persistencia.genruntimeconfig.cache
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Persistencia\bin\Debug\net5.0\MascotaEpets.app.Dominio.dll
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Persistencia\bin\Debug\net5.0\MascotaEpets.app.Dominio.pdb
-C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Persistencia\obj\Debug\net5.0\MascotaEpets.app.Persistencia.csproj.CopyComplete

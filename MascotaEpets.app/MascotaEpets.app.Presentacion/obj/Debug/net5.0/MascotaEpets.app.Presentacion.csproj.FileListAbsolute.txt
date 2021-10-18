@@ -70,3 +70,4 @@ C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\ref\MascotaEpets.app.Presentacion.dll
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\MascotaEpets.app.Presentacion.pdb
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\MascotaEpets.app.Presentacion.genruntimeconfig.cache
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Medicos\ListadoMedicos.cshtml.g.cs

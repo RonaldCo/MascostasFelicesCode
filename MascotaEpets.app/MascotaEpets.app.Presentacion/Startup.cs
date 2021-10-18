@@ -26,7 +26,7 @@ namespace MascotaEpets.app.Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
+            //services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
