@@ -13,7 +13,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         //bool BorrarMedico(int IdMedico);
         //bool ActualizarMedico(MedicoVeterinario medicoVeterinario);
         IEnumerable<MedicoVeterinario> ConsultarMedicos();
-        MedicoVeterinario BuscarMedicoId(int idMedico);
+        MedicoVeterinario BuscarMedicoId(int IdMedico);
 
     }
 }

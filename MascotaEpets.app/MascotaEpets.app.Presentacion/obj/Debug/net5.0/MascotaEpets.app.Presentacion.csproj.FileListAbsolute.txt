@@ -73,3 +73,5 @@ C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Medicos\ListadoMedicos.cshtml.g.cs
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Medicos\BuscarMedico.cshtml.g.cs
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Medicos\PaginaNoEncontrada.cshtml.g.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Medicos\ActualizarMedicos.cshtml.g.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Medicos\IngresarMedico.cshtml.g.cs

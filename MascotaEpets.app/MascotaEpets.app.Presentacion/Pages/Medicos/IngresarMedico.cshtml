@@ -1,0 +1,37 @@
+﻿@page
+@model MascotaEpets.app.Presentacion.Pages.IngresarMedicoModel
+@{
+}
+
+<h1>Ingresar Medico</h1>
+<a asp-page="./ListadoMedicos" class="btn btn-primary">Regresar a listado Medicos</a>
+<form method="post">
+<div class="form-group">
+        <label asp-for="medico.Nombres"></label>
+        <input id="Nombre" type="text" asp-for="medico.Nombres" class="form-control" placeholder="Ingrese Nombres"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="medico.Apellidos"></label>
+        <input id="Apellido" type="text" asp-for="medico.Apellidos" class="form-control" placeholder="Ingrese Apellidos"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="medico.TarjetaProfesional"></label>
+        <input id="TarjetaPro" type="text" asp-for="medico.TarjetaProfesional" class="form-control" placeholder="Ingrese Tarjeta Profesional"/>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Ingresar Datos</button>
+        <button id="Cancelar" onclick="LimpiarForm()" type="submit" class="btn btn-primary">Cancelar</button>
+       
+    </div>
+</form>
+
+<script>
+
+        function LimpiarForm(){
+
+            $("#Nombre").val('');
+            $("#Apellido").val('');
+            $("#TarjetaPro").val('');
+        }
+
+</script>

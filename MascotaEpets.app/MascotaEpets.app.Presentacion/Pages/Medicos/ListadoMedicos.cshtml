@@ -26,9 +26,18 @@
                 <td>
                    <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.IdMedico">Buscar Medico</a>
                 </td> 
-            </tr>
+                <td>
+                   <a class="btn btn-primary table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.IdMedico">Actualizar Medicos</a>
+                </td> 
+                 <td>
+                   <a class="btn btn-primary table-btn" asp-page="./IngresarMedico" >Ingresar Medico</a>
+                </td> 
+                <td>
+                    <img src="~/img/update.png" width="40px" onclick="CargarActualizar('@item.Nombres');">
+                </td>
+             </tr>
         }            
-    </table>
+</table>
 </div>
 </div>
 

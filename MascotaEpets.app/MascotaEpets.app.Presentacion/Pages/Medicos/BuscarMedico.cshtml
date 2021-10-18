@@ -2,3 +2,12 @@
 @model MascotaEpets.app.Presentacion.Pages.BuscarMedicoModel
 @{
 }
+
+<h1>Buscar Medico por su Id</h1>
+
+<p>@Model.medico.IdMedico</p>
+<p>@Model.medico.Nombres</p>
+<p>@Model.medico.Apellidos</p>
+<p>@Model.medico.TarjetaProfesional</p>
+
+<a asp-page="./ListadoMedicos" class="btn btn-primary">Regresar a Listado Medico</a>
