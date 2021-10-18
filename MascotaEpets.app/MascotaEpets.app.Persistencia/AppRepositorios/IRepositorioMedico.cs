@@ -9,11 +9,21 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 {
     public interface IRepositorioMedico 
     {
-       // bool IngresarMedico(MedicoVeterinario medicoVeterinario);
-        //bool BorrarMedico(int IdMedico);
-        //bool ActualizarMedico(MedicoVeterinario medicoVeterinario);
-        IEnumerable<MedicoVeterinario> ConsultarMedicos();
-        MedicoVeterinario BuscarMedicoId(int IdMedico);
+        #region Firma de los metodos para la implementacion en la clase
+        //Firma del Metodo Para Ingresar Datos
+        MedicoVeterinario IngresarMedico(MedicoVeterinario ObjMedico);
 
+        //Firma del Metodo para Eliminar un Medico
+        bool BorrarMedico(int IdMedico);
+
+        //Firma del Metodo para Actualizar Datos
+        MedicoVeterinario ActualizarMedico(int IdMedico,string Nombres,string Apellidos,string TarjetaProfesional);
+
+        //Firma del Metodo para consultar todos los medicos
+        IEnumerable<MedicoVeterinario> ConsultarMedicos();
+
+         //Firma del Metodo para un medico ID   
+        MedicoVeterinario BuscarMedicoId(int IdMedico);
+        #endregion
     }
 }

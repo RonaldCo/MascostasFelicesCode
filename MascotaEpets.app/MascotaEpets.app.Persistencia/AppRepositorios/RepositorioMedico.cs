@@ -8,23 +8,21 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 {
      public class RepositorioMedico:IRepositorioMedico
     {
-        /*
+        
         bool valorRetorno=false;
+        #region CRUD Ingresar datos medicos
         //Ingresar Informacion del medico
-        public bool IngresarMedico(MedicoVeterinario medicoVeterinario){
+        public MedicoVeterinario IngresarMedico(MedicoVeterinario ObjMedico){
                 
             try
             {
                  //abriendo, Cerrando y liberando recursos del using.
                  using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                     
-                   
-                     var RegistroMed=contexto.Add(medicoVeterinario);
+                    //agrego a la conexion contexto BD un medico con ADD y guardo cambios despues retorno el medico
+                     contexto.MedicoVeterinario.Add(ObjMedico);
                      contexto.SaveChanges();
-                     if(contexto.SaveChanges()>=1){
-                        valorRetorno=true;
-                     }
-                     return valorRetorno;
+                     return ObjMedico;
                  }
             }
             catch (Exception ex)
@@ -34,11 +32,12 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 
                
         }
+        #endregion
+        
         //Borrar Medico
-        public bool BorrarMedico(int IdPersona){
+        public bool BorrarMedico(int IdMedico){
 
-            try
-            {
+          
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                
                 var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdPersona ==IdPersona select p);
@@ -49,47 +48,39 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 
                 }
                 return valorRetorno;
-             }
-            }
-            catch (Exception ex)
-            {
-                 string error=ex.Message;
+             
             }
         
         }
-
+        
        /// <summary>
        /// Ejemplo de documentacion de actualizar EL Medico Veterinario
        /// </summary>
        /// <param name="medicoVeterinario"></param>
        /// <returns></returns>
-       #region Actualizar Datos del Medico Veterinario
-         public bool ActualizarMedico(MedicoVeterinario medicoVeterinario){
+ 
+         public MedicoVeterinario ActualizarMedico(int IdMedico,string Nombres,string Apellidos,string TarjetaProfesional){
 
-            try
-            {
+            
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                  
-                 var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdPersona =medicoVeterinario.IdPersona select p);
+                 var BuscarMedico=(from p in contexto.MedicoVeterinario where p.IdMedico=MedicoVeterinario.IdMedico select p);
                  if(!(BuscarMedico==null)) {
-                     BuscarMedico.Nombres=medicoVeterinario.Nombres;
-                     BuscarMedico.TarjetaProfesional=medicoVeterinario.TarjetaProfesional;
+                     BuscarMedico.Nombres=MedicoVeterinario.Nombres;
+                     BuscarMedico.Apellidos=MedicoVeterinario.Apellidos;
+                     BuscarMedico.TarjetaProfesional=MedicoVeterinario.TarjetaProfesional;
                      valorRetorno=true;
 
                  }
                  return valorRetorno;
              }
-            }
-            catch (Exception ex)
-            {
-               string error=ex.Message;
-            }
-        }
-       #endregion
-    
-        */     
+            
+          
+
+         }
+
         // Consultar todos los Medicos (lista)
-        public IEnumerable<MascotaEpets.app.Dominio.MedicoVeterinario> ConsultarMedicos(){
+          public IEnumerable<MascotaEpets.app.Dominio.MedicoVeterinario> ConsultarMedicos(){
             
                 //var lista de medicos
              using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
@@ -104,6 +95,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
              }
              
         }
+        
         //Consultar un medico 
         public MedicoVeterinario BuscarMedicoId(int IdMedico){
 
@@ -118,11 +110,8 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 
                 return contexto.medicoVeterinario.SingleOrDefault(s=>s.IdMedico==IdMedico);
 
-            
-            
             }
 
         }
-
     }   
 }
