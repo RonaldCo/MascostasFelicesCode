@@ -14,8 +14,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         //Ingresar Informacion del medico
         public MedicoVeterinario IngresarMedico(MedicoVeterinario ObjMedico){
                 
-            try
-            {
+        
                  //abriendo, Cerrando y liberando recursos del using.
                  using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                     
@@ -24,14 +23,9 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
                      contexto.SaveChanges();
                      return ObjMedico;
                  }
-            }
-            catch (Exception ex)
-            {
-                string error=ex.Message;
-            }
-
                
         }
+
         #endregion
         
         //Borrar Medico
