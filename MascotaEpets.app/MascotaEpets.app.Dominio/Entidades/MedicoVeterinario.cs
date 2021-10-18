@@ -10,7 +10,7 @@ namespace MascotaEpets.app.Dominio
 {
     [Table("MedicoDb")]
 
-    public class MedicoVeterinario:Persona
+    public class MedicoVeterinario
     {
         [Column("IdMedico")]
         [Key]
@@ -35,10 +35,10 @@ namespace MascotaEpets.app.Dominio
         public virtual TipoAnimal TipoAnimal{ get; set; }
 
         //[ForeignKey("IdEmpresa")]
-        public virtual Empresa Empresa{ get; set; }
+        //public virtual Empresa Empresa{ get; set; }
 
         //[ForeignKey("IdSolicitud")]
-        public virtual SolicitudVisita SolicitudVisita{ get; set; }
+        //public virtual SolicitudVisita SolicitudVisita{ get; set; }
 
       
     }

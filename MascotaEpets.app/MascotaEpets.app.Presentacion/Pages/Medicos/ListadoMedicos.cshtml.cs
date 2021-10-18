@@ -11,18 +11,29 @@ namespace MascotaEpets.app.Presentacion.Pages
 {
     public class ListadoMedicosModel : PageModel
     {
-        //private readonly IRepositorioMedico repositorio;
-        //public IEnumerable<MascotaEpets.app.Dominio.MedicoVeterinario> medico=new IEnumerable<MascotaEpets.app.Dominio.MedicoVeterinario>;
+        // Variable de tipo Interface
+        private readonly IRepositorioMedico repositorio;
+
+        //Variable que contiene la asignacion del metodo Buscar Medicos
+        public IEnumerable<MascotaEpets.app.Dominio.MedicoVeterinario> Medicos= new List<MascotaEpets.app.Dominio.MedicoVeterinario>();
+        
+        // Inicializacion de la pagina
+
+        [BindProperty]
+        public MascotaEpets.app.Dominio.MedicoVeterinario ObjMedico{get;set;}
+
+        //Metodo de consulta
         public void OnGet()
         {
-          //medico=repositorio.ConsultarMedicos().Tolist();
+          Medicos=repositorio.ConsultarMedicos().ToList();
         }
 
-        /*public ListadoMedicosModel(IRepositorioMedico repositorio){
+        //Metodo Constructor de la clase
+        public ListadoMedicosModel(IRepositorioMedico repositorio){
 
             this.repositorio=repositorio;
 
-      }   */ 
+      }    
 
     }
 }

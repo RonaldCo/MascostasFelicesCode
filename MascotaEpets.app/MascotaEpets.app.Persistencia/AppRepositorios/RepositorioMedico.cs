@@ -1,4 +1,4 @@
-/*using MascotaEpets.app.Dominio;
+using MascotaEpets.app.Dominio;
 using System.Collections.Generic;
 using System.Linq;
 using System;
@@ -8,6 +8,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 {
      public class RepositorioMedico:IRepositorioMedico
     {
+        /*
         bool valorRetorno=false;
         //Ingresar Informacion del medico
         public bool IngresarMedico(MedicoVeterinario medicoVeterinario){
@@ -86,12 +87,10 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         }
        #endregion
     
-       
+        */     
         // Consultar todos los Medicos (lista)
-        public IEnumerable<MedicoVeterinario> ConsultarMedicos(){
+        public IEnumerable<MascotaEpets.app.Dominio.MedicoVeterinario> ConsultarMedicos(){
             
-            try
-            {
                 //var lista de medicos
              using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                  
@@ -103,36 +102,27 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
                  var listaMedicos=(from p in contexto.medicoVeterinario select p).ToList();
                  return listaMedicos;
              }
-                
-            }
-            catch (Exception ex)
-            {
-                 string error=ex.Message;
-            }
              
         }
         //Consultar un medico 
-        public MedicoVeterinario ConsultarMedicos(int IdPersona){
+        public MedicoVeterinario BuscarMedicoId(int IdMedico){
 
-            try
-            {
+        
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                 
                 //con linq
-                 var listaMedicos=(from p in contexto.medicoVeterinario where p.IdPersona==IdPersona select p).First();
-                 return listaMedicos;
+                // var Medico=(from p in contexto.medicoVeterinario where p.IdMedico==IdMedico select p).First();
+                // return Medico;
 
+                //sintaxis Entity framework (ef)
 
-              }
-            }
-            catch (Exception ex)
-            {
-                 string error=ex.Message;
-            }
+                return contexto.medicoVeterinario.SingleOrDefault(s=>s.IdMedico==IdMedico);
+
             
             
+            }
+
         }
 
-    }
-
-}   */
+    }   
+}
