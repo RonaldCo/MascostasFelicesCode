@@ -33,7 +33,7 @@ namespace MascotaEpets.app.Presentacion.Pages
            tipoanimal_= repositorio_tipoAnimal.ListadoAnimal().ToList();
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             MedicoVeterinario ObjMedico=new MedicoVeterinario();
             ObjMedico.Nombres=medico.Nombres;
@@ -42,6 +42,15 @@ namespace MascotaEpets.app.Presentacion.Pages
             ObjMedico.Telefono=medico.Telefono;
             ObjMedico.TarjetaProfesional=medico.TarjetaProfesional;
             medico=repositorio.IngresarMedico(ObjMedico);
+              if (medico==null)
+            {
+               return RedirectToPage("./PaginaNoEncontrada") ;
+            }
+            else{
+
+                return RedirectToPage("./ListadoMedicos") ;
+            
+                }
         }
     }
 }

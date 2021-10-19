@@ -1,0 +1,56 @@
+﻿@page
+@model MascotaEpets.app.Presentacion.Pages.IngresarPropietariosModel
+@{
+}
+<h1>Ingresar Propietario</h1>
+<a asp-page="./ListaPropietarios" class="btn btn-primary">Regresar a listado Propietario</a>
+<form method="post">
+<div class="form-group">
+        <label asp-for="Propietario.Nombres"></label>
+        <input id="Nombre" type="text" asp-for="Propietario.Nombres" class="form-control" placeholder="Ingrese Nombres"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Apellidos"></label>
+        <input id="Apellido" type="text" asp-for="Propietario.Apellidos" class="form-control" placeholder="Ingrese Apellidos"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Cedula"></label>
+        <input id="Cedula" type="text" asp-for="Propietario.Cedula" class="form-control" placeholder="Ingrese Cedula"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Telefono"></label>
+        <input id="Telefono" type="text" asp-for="Propietario.Telefono" class="form-control" placeholder="Ingrese Telefono"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Direccion"></label>
+        <input id="Direccion" type="text" asp-for="Propietario.Direccion" class="form-control" placeholder="Ingrese Tarjeta Profesional"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.Email"></label>
+        <input id="Email" type="text" asp-for="Propietario.Email" class="form-control" placeholder="Ingrese Tarjeta Profesional"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Propietario.CantidadMascota"></label>
+        <input id="Email" type="text" asp-for="Propietario.CantidadMascota" class="form-control" placeholder="Ingrese Tarjeta Profesional"/>
+    </div>
+   
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Ingresar Datos</button>
+       
+       
+    </div>
+</form>
+<button id="Cancelar" onclick="LimpiarForm()" type="submit" class="btn btn-danger">Cancelar</button>
+       
+<script>
+
+        function LimpiarForm(){
+
+            $("#Nombre").val('');
+            $("#Apellido").val('');
+            $("#TarjetaPro").val('');
+            $("#Cedula").val('');
+            $("#Telefono").val('');
+        }
+
+</script>

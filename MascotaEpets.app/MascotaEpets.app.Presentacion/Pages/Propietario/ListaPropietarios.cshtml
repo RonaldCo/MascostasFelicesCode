@@ -1,12 +1,13 @@
 ﻿@page
-@model MascotaEpets.app.Presentacion.Pages.ListadoMedicosModel
+@model MascotaEpets.app.Presentacion.Pages.ListaPropietariosModel
 @{
 }
+
 <div class="row">
     <div class="col-lg col-md col">
         <div class="card">
             <div class="card-header bg-dark bg-gradient text-light">
-              <h2>Lista de Medicos</h2>
+              <h2>Lista de Propietarios</h2>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -17,12 +18,13 @@
                             <th>Apellidos</th>
                             <th>Cedula</th>
                             <th>Telefono</th>
-                            <th>Tarjeta Profesional</th>
-                            
+                            <th>Direccion</th>
+                            <th>Email</th>
+                            <th>Mascotas</th>
                         </tr>
                     </thead>
                     <tbody>
-                         @foreach (var item in Model.Medicos)
+                         @foreach (var item in Model.Propietarios)
                               {  
                                 <tr>
                                     <td>
@@ -41,17 +43,22 @@
                                         @item.Telefono
                                     </td>
                                     <td>
-                                        @item.TarjetaProfesional
+                                        @item.Direccion
                                     </td>
-                                    
                                     <td>
-                                       <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.Id">Buscar</a>
+                                        @item.Email
+                                    </td>
+                                    <td>
+                                        @item.CantidadMascota
+                                    </td>
+                                    <td>
+                                       <a class="btn btn-primary table-btn" asp-page="./BuscarPropietario" asp-route-IdMedico="@item.Id">Buscar</a>
                                     </td> 
                                     <td>
-                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.Id">Editar</a>
+                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarPropietarios" asp-route-IdMedico="@item.Id">Editar</a>
                                     </td> 
                                     <td>
-                                       <a class="btn btn-success table-btn" asp-page="./IngresarMedico" >Ingresar</a>
+                                       <a class="btn btn-success table-btn" asp-page="./IngresarPropietarios" >Ingresar</a>
                                     </td> 
                                 </tr>
                               }
@@ -67,32 +74,3 @@
     </div>
     
 </div>
-<script>
-   /* function MensajeEliminar(){
-
-    confirm("¿Estas Seguro de Eliminar el registro? ");
-
-
-    function MensajeActualizar(){
-
-      confirm("¿Estas Seguro de Actualizar el registro? ");
-
-    }
-}
-
-    function LimpiarDatos(){
-
-        $("#Nombre").val('');
-        $("#btnIngresar").css('display','block');
-        $("#btnActualizar").css('display','none');
-    }
-
-     function CargarActualizar(){
-
-        $("#Nombre").val(Nombre);
-        $("#Tarjeta").val('');
-        $("#btnIngresar").css('display','none');
-        $("#btnActualizar").css('display','block');
-    }*/
-</script>
-

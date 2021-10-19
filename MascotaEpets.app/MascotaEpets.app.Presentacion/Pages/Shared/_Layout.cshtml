@@ -10,20 +10,28 @@
 <body>
     <header>
         <nav Id="navega" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3" >
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="~/img/MascotasFelizPets.png" width="48" class="my-4" title="title" alt="additional title" /></a>
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Mascota Epets</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+            <div class="container-fluid">
+                <div class="navbar-brand" href="index.html">
+                    <img src="~/img/MascotasFelizPets.png" width="48" class="img-fluid" title="title" alt="additional title" />
+                </div>
+                <div>
+                    <h1 class="mt-1" style="color: white; text-align-last: auto;" >Mascotas Epets</h1>
+                </div>
+                <div>
+                    <a class="navbar-brand" asp-area="" asp-page="/Index">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                    </button>
+                </div>
+                
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-page="/Medicos/ListadoMedicos" >Medicos </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Propietario/ListaPropietario">Propietarios</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Propietario/ListaPropietarios">Propietarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-page="/Mascotas/ListaMascota">Mascota</a>
