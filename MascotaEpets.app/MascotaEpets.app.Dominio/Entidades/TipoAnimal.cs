@@ -16,9 +16,9 @@ namespace MascotaEpets.app.Dominio
         public int idAnimal { get; set; }
 
         [Required]
-        [Column("ClaseAnimal")]
+        [Column("Animal")]
         [StringLength(20,MinimumLength=5)]
-        public string ClaseAnimal { get; set; }
+        public string Animal { get; set; }
 
     }
 }

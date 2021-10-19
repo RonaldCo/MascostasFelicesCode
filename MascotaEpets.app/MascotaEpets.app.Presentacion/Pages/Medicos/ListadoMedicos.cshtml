@@ -22,13 +22,13 @@
                         @item.TarjetaProfesional
                     </td>
                     <td>
-                       <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.IdMedico">Buscar Medico</a>
+                       <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.IdMedico">Buscar</a>
                     </td> 
                     <td>
-                       <a class="btn btn-primary table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.IdMedico">Actualizar Medicos</a>
+                       <a class="btn btn-warning table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.IdMedico">Actualizar</a>
                     </td> 
                      <td>
-                       <a class="btn btn-primary table-btn" asp-page="./IngresarMedico" >Ingresar Medico</a>
+                       <a class="btn btn-success table-btn" asp-page="./IngresarMedico" >Ingresar</a>
                     </td> 
                     <td>
                         <img src="~/img/update.png" width="40px" onclick="CargarActualizar('@item.Nombres');">
