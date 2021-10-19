@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -11,9 +11,19 @@ namespace MascotaEpets.app.Dominio
     [Table("PersonaDb")]
     public class Persona
     {
-        [Column("IdPersona")]
+        [Column("Id")]
         [Key]
-        public int IdPersona { get; set; }
+        public int Id { get; set; }
+        
+        [Required]
+        [Column("Nombre")]
+        [StringLength(30,MinimumLength=5)]
+        public string Nombres { get; set; }
+        
+        [Required]
+        [Column("Apellido")]
+        [StringLength(30,MinimumLength=5)]
+        public string Apellidos { get; set; }
 
         [Required]
         [Column("Cedula")]
@@ -21,18 +31,8 @@ namespace MascotaEpets.app.Dominio
         public string Cedula { get; set; }
 
         [Required]
-        [Column("Nombre")]
-        [StringLength(30,MinimumLength=5)]
-        public string Nombres { get; set; }
-
-        [Required]
-        [Column("Apellido")]
-        [StringLength(30,MinimumLength=5)]
-        public string Apellidos { get; set; }
-
-        [Required]
         [Column("Telefono")]
         [StringLength(12,MinimumLength=5)]
         public string Telefono { get; set; }
     }
-}*/
+}
