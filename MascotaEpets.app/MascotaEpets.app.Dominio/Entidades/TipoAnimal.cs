@@ -13,7 +13,7 @@ namespace MascotaEpets.app.Dominio
     {
         [Column("IdAnimal")]
         [Key]
-        public int idAnimal { get; set; }
+        public int IdAnimal { get; set; }
 
         [Required]
         [Column("Animal")]

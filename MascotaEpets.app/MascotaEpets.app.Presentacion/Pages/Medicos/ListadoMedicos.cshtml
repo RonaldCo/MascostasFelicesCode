@@ -10,7 +10,7 @@
             {
             <tr>
                 <td>
-                      @item.IdMedico
+                      @item.Id
                 </td>
                     <td>
                         @item.Nombres
@@ -22,10 +22,10 @@
                         @item.TarjetaProfesional
                     </td>
                     <td>
-                       <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.IdMedico">Buscar</a>
+                       <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.Id">Buscar</a>
                     </td> 
                     <td>
-                       <a class="btn btn-warning table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.IdMedico">Actualizar</a>
+                       <a class="btn btn-warning table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.Id">Actualizar</a>
                     </td> 
                      <td>
                        <a class="btn btn-success table-btn" asp-page="./IngresarMedico" >Ingresar</a>

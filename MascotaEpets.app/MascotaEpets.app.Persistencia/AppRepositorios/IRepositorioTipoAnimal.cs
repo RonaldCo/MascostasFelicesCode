@@ -7,6 +7,6 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 {
     public interface IRepositorioTipoAnimal
     {
-        
+        IEnumerable<TipoAnimal> ListadoAnimal();
     }
 }

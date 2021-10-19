@@ -28,7 +28,7 @@ namespace MascotaEpets.app.Persistencia.AppData
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-S0MTAM5\\SQLEXPRESS;Initial Catalog=ProyectoMascotaEpets2;Integrated Security=True;");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-S0MTAM5\\SQLEXPRESS;Initial Catalog=Mi_Veterinaria;Integrated Security=True;");
             }
         }
     }

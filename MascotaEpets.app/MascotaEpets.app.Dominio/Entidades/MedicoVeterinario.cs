@@ -10,7 +10,7 @@ namespace MascotaEpets.app.Dominio
 {
     [Table("MedicoDb")]
 
-    public class MedicoVeterinario
+    public class MedicoVeterinario:Persona
     {
         /*[Column("IdMedico")]
         [Key]

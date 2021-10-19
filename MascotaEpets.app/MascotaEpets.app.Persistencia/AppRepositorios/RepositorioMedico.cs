@@ -60,10 +60,12 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                  
                  //var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdMedico=IdMedico select p);
-                 var BuscarMedico=contexto.medicoVeterinario.SingleOrDefault(s=>s.IdMedico==ObjMedico.IdMedico);
+                 var BuscarMedico=contexto.medicoVeterinario.SingleOrDefault(s=>s.Id==ObjMedico.Id);
                  if(!(BuscarMedico==null)) {
                      BuscarMedico.Nombres=ObjMedico.Nombres;
                      BuscarMedico.Apellidos=ObjMedico.Apellidos;
+                     BuscarMedico.Cedula=ObjMedico.Cedula;
+                     BuscarMedico.Telefono=ObjMedico.Telefono;
                      BuscarMedico.TarjetaProfesional=ObjMedico.TarjetaProfesional;
                      contexto.SaveChanges();
                     
@@ -103,7 +105,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
 
                 //sintaxis Entity framework (ef)
 
-                return contexto.medicoVeterinario.SingleOrDefault(s=>s.IdMedico==IdMedico);
+                return contexto.medicoVeterinario.SingleOrDefault(s=>s.Id==IdMedico);
 
             }
 
