@@ -11,15 +11,28 @@ namespace MascotaEpets.app.Presentacion.Pages
 {
     public class IngresarMedicoModel : PageModel
     {
-        [BindProperty]
+        // Variable de tipo Interface
+        private readonly IRepositorioMedico repositorio;
 
+        [BindProperty]
         public MascotaEpets.app.Dominio.MedicoVeterinario medico{get;set;}
+
+        //Contructor de la clase para inicializar
+        public IngresarMedicoModel(IRepositorioMedico repositorio){
+            this.repositorio=repositorio;
+
+        }
         public void OnGet()
         {
         }
 
         public void OnPost()
         {
+            MedicoVeterinario ObjMedico=new MedicoVeterinario();
+            ObjMedico.Nombres=medico.Nombres;
+            ObjMedico.Apellidos=medico.Apellidos;
+            ObjMedico.TarjetaProfesional=medico.TarjetaProfesional;
+            medico=repositorio.IngresarMedico(ObjMedico);
         }
     }
 }

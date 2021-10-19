@@ -9,7 +9,6 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
      public class RepositorioMedico:IRepositorioMedico
     {
         
-        bool valorRetorno=false;
         #region CRUD Ingresar datos medicos
         //Ingresar Informacion del medico
         public MedicoVeterinario IngresarMedico(MedicoVeterinario ObjMedico){
@@ -19,7 +18,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
                  using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                     
                     //agrego a la conexion contexto BD un medico con ADD y guardo cambios despues retorno el medico
-                     contexto.MedicoVeterinario.Add(ObjMedico);
+                     contexto.medicoVeterinario.Add(ObjMedico);
                      contexto.SaveChanges();
                      return ObjMedico;
                  }
@@ -29,7 +28,9 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         #endregion
         
         //Borrar Medico
-        public bool BorrarMedico(int IdMedico){
+
+
+        /*public bool BorrarMedico(int IdMedico){
 
           
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
@@ -45,7 +46,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
              
             }
         
-        }
+        }*/
         
        /// <summary>
        /// Ejemplo de documentacion de actualizar EL Medico Veterinario
@@ -53,23 +54,23 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
        /// <param name="medicoVeterinario"></param>
        /// <returns></returns>
  
-         public MedicoVeterinario ActualizarMedico(int IdMedico,string Nombres,string Apellidos,string TarjetaProfesional){
+         public MedicoVeterinario ActualizarMedico(MedicoVeterinario ObjMedico){
 
             
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                  
-                 var BuscarMedico=(from p in contexto.MedicoVeterinario where p.IdMedico=MedicoVeterinario.IdMedico select p);
+                 //var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdMedico=IdMedico select p);
+                 var BuscarMedico=contexto.medicoVeterinario.SingleOrDefault(s=>s.IdMedico==ObjMedico.IdMedico);
                  if(!(BuscarMedico==null)) {
-                     BuscarMedico.Nombres=MedicoVeterinario.Nombres;
-                     BuscarMedico.Apellidos=MedicoVeterinario.Apellidos;
-                     BuscarMedico.TarjetaProfesional=MedicoVeterinario.TarjetaProfesional;
-                     valorRetorno=true;
+                     BuscarMedico.Nombres=ObjMedico.Nombres;
+                     BuscarMedico.Apellidos=ObjMedico.Apellidos;
+                     BuscarMedico.TarjetaProfesional=ObjMedico.TarjetaProfesional;
+                     contexto.SaveChanges();
+                    
 
                  }
-                 return valorRetorno;
+                  return BuscarMedico;
              }
-            
-          
 
          }
 

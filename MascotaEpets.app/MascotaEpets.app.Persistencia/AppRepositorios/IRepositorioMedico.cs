@@ -14,11 +14,12 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         MedicoVeterinario IngresarMedico(MedicoVeterinario ObjMedico);
 
         //Firma del Metodo para Eliminar un Medico
-        bool BorrarMedico(int IdMedico);
+        //bool BorrarMedico(int IdMedico);
 
         //Firma del Metodo para Actualizar Datos
-        MedicoVeterinario ActualizarMedico(int IdMedico,string Nombres,string Apellidos,string TarjetaProfesional);
-
+        //MedicoVeterinario ActualizarMedico(int IdMedico,string Nombres,string Apellidos,string TarjetaProfesional);
+        //Firma del Metodo para Actualizar Datos   OTRA FORMA DE HACERLO
+        MedicoVeterinario ActualizarMedico(MedicoVeterinario ObjMedico);
         //Firma del Metodo para consultar todos los medicos
         IEnumerable<MedicoVeterinario> ConsultarMedicos();
 
