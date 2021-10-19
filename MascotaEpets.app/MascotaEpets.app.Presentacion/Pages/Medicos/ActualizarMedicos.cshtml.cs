@@ -12,14 +12,43 @@ namespace MascotaEpets.app.Presentacion.Pages
 {
     public class ActualizarMedicosModel : PageModel
     {
-         [BindProperty]
+        // Variable de tipo Interface
+        private readonly IRepositorioMedico repositorio;
+        
+        [BindProperty]
 
         public MascotaEpets.app.Dominio.MedicoVeterinario medico{get;set;}
-        public void OnGet()
+
+        public ActualizarMedicosModel(IRepositorioMedico repositorio){
+
+            this.repositorio=repositorio;
+
+        } 
+         public IActionResult OnGet(int IdMedico)
         {
+            medico=repositorio.BuscarMedicoId(IdMedico);
+
+            if (medico==null)
+            {
+               return RedirectToPage("./PaginaNoEncontrada") ;
+            }
+            else{
+
+                return Page();
+            }
         }
-         public void OnPost()
+         public IActionResult OnPost()
         {
-        }
+            medico=repositorio.ActualizarMedico(medico);
+              if (medico==null)
+            {
+               return RedirectToPage("./PaginaNoEncontrada") ;
+            }
+            else{
+
+                return RedirectToPage("./ListadoMedicos") ;
+            
+                }
+         }
     }
 }

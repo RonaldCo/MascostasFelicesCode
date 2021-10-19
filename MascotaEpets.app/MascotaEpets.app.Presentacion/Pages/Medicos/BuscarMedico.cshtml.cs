@@ -24,7 +24,7 @@ namespace MascotaEpets.app.Presentacion.Pages
 
             this.repositorio=repositorio;
 
-      } 
+        } 
         public IActionResult OnGet(int IdMedico)
         {
             medico=repositorio.BuscarMedicoId(IdMedico);
