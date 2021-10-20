@@ -3,9 +3,9 @@
 @{
 }
 
-<h1>Actualizar Medicos</h1>
-<a asp-page="./ListadoMedicos" class="btn btn-primary">Regresar a listado Medicos</a>
 <form method="post">
+    <div class="card-header bg-dark bg-gradient text-light">
+        <h1>Actualizar Medicos</h1>
     <div class="form-group">
         <label asp-for="medico.Nombres"></label>
         <input id="Nombre" type="text" asp-for="medico.Nombres" class="form-control" placeholder="Ingrese Nombres"/>
@@ -33,8 +33,9 @@
        
     </div>
 </form>
+</div>
 <button id="Cancelar" onclick="LimpiarForm();" type="submit"  class="btn btn-danger">Cancelar</button>
-
+<a asp-page="./ListadoMedicos" class="btn btn-primary">Regresar</a>
 <script>
 
         function LimpiarForm(){

@@ -3,13 +3,56 @@
 @{
 }
 
-<h1>Buscar Medico por su Id</h1>
+<div class="row">
+    <div class="col-lg col-md col">
+        <div class="card">
+            <div class="card-header bg-dark bg-gradient text-light">
+              <h2>Medicos Por ID</h2>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Cedula</th>
+                            <th>Telefono</th>
+                            <th>Tarjeta Profesional</th>
+                        </tr>
+                    </thead>
+                    <tbody>   
+                             <tr>
+                                    <td>
+                                        @Model.medico.Id
+                                    </td>
+                                    <td>
+                                        @Model.medico.Nombres
+                                    </td>
+                                    <td>
+                                        @Model.medico.Apellidos
+                                    </td>
+                                    <td>
+                                        @Model.medico.Cedula
+                                    </td>
+                                    <td>
+                                        @Model.medico.Telefono
+                                    </td>
+                                    <td>
+                                        @Model.medico.TarjetaProfesional
+                                    </td>
+                                    <td>
+                                       <a asp-page="./ListadoMedicos" class="btn btn-primary">Regresar</a>
+                                    </td> 
+                                    
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
 
-<p>@Model.medico.Id</p>
-<p>@Model.medico.Nombres</p>
-<p>@Model.medico.Apellidos</p>
-<p>@Model.medico.Cedula</p>
-<p>@Model.medico.Telefono</p>
-<p>@Model.medico.TarjetaProfesional</p>
-
-<a asp-page="./ListadoMedicos" class="btn btn-primary">Regresar a Listado Medico</a>
+            </div>
+        </div>
+    </div>
+    
+</div>

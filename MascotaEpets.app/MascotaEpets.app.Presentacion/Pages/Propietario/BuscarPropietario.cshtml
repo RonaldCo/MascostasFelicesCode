@@ -1,13 +1,12 @@
 ﻿@page
-@model MascotaEpets.app.Presentacion.Pages.ListaPropietariosModel
+@model MascotaEpets.app.Presentacion.Pages.BuscarPropietarioModel
 @{
 }
-
 <div class="row">
     <div class="col-lg col-md col">
         <div class="card">
             <div class="card-header bg-dark bg-gradient text-light">
-              <h2>Lista de Propietarios</h2>
+              <h2>Propietarios Por ID</h2>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -20,48 +19,43 @@
                             <th>Telefono</th>
                             <th>Direccion</th>
                             <th>Email</th>
-                            <th>Mascotas</th>
+                            <th>Cant Mascotas</th>
+                            
                         </tr>
                     </thead>
-                    <tbody>
-                         @foreach (var item in Model.Propietarios)
-                              {  
-                                <tr>
+                    <tbody>   
+                             <tr>
                                     <td>
-                                        @item.Id
+                                        @Model.propietario.Id
                                     </td>
                                     <td>
-                                        @item.Nombres
+                                        @Model.propietario.Nombres
                                     </td>
                                     <td>
-                                        @item.Apellidos
+                                        @Model.propietario.Apellidos
                                     </td>
                                     <td>
-                                        @item.Cedula
+                                        @Model.propietario.Cedula
                                     </td>
                                     <td>
-                                        @item.Telefono
+                                        @Model.propietario.Telefono
                                     </td>
                                     <td>
-                                        @item.Direccion
+                                        @Model.propietario.Direccion
                                     </td>
                                     <td>
-                                        @item.Email
+                                        @Model.propietario.Email
                                     </td>
                                     <td>
-                                        @item.CantidadMascota
+                                        @Model.propietario.CantidadMascota
                                     </td>
+                                    
                                     <td>
-                                       <a class="btn btn-primary table-btn" asp-page="./BuscarPropietario" asp-route-IdPropietario="@item.Id">Buscar</a>
+                                       <a asp-page="./ListaPropietarios" class="btn btn-primary">Regresar</a>
                                     </td> 
-                                    <td>
-                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarPropietarios" asp-route-IdPropietario="@item.Id">Editar</a>
-                                    </td> 
-                                    <td>
-                                       <a class="btn btn-success table-btn" asp-page="./IngresarPropietarios" >Ingresar</a>
-                                    </td> 
+                                    
                                 </tr>
-                              }
+                              
                     </tbody>
                     
                 </table>
