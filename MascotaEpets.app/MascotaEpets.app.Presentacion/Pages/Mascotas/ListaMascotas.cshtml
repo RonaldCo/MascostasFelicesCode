@@ -1,57 +1,69 @@
 ﻿@page
-@model MascotaEpets.app.Presentacion.Pages.ListadoMedicosModel
+@model MascotaEpets.app.Presentacion.Pages.ListaMascotasModel
 @{
 }
 <div class="row">
     <div class="col-lg col-md col">
         <div class="card">
             <div class="card-header bg-dark bg-gradient text-light">
-              <h3>Lista de Medicos</h>
+              <h3>Lista de Mascotas</h3>
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombres</th>
-                            <th>Apellidos</th>
-                            <th>Cedula</th>
-                            <th>Telefono</th>
-                            <th>Tarjeta Profesional</th>
+                            <th>Nombre</th>
+                            <th>Color de Ojos</th>
+                            <th>Color de Piel</th>
+                            <th>Temperatura</th>
+                            <th>Peso</th>
+                            <th>Frecuencia Respiratoria</th>
+                            <th>Frecuencia Cardiaca</th>
+                            <th>Estado de Animo</th>
                             
                         </tr>
                     </thead>
                     <tbody>
-                         @foreach (var item in Model.Medicos)
+                         @foreach (var item in Model.Mascota)
                               {  
                                 <tr>
                                     <td>
-                                        @item.Id
+                                        @item.IdMascota
                                     </td>
                                     <td>
-                                        @item.Nombres
+                                        @item.Nombre
                                     </td>
                                     <td>
-                                        @item.Apellidos
+                                        @item.ColorOjos
                                     </td>
                                     <td>
-                                        @item.Cedula
+                                        @item.ColorPiel
                                     </td>
                                     <td>
-                                        @item.Telefono
+                                        @item.Temperatura
                                     </td>
                                     <td>
-                                        @item.TarjetaProfesional
+                                        @item.Peso
+                                    </td>
+                                      <td>
+                                        @item.FrecuenciaRespiratoria
+                                    </td>
+                                    <td>
+                                        @item.FrecuenciaCardiaca
+                                    </td>
+                                    <td>
+                                        @item.EstadoAnimo
                                     </td>
                                     
                                     <td>
-                                       <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.Id">Buscar</a>
+                                       <a class="btn btn-primary table-btn" asp-page="./BuscarMascota" asp-route-IdMascota="@item.IdMascota">Buscar</a>
                                     </td> 
                                     <td>
-                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.Id">Editar</a>
+                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarMascota" asp-route-IdMascota="@item.IdMascota">Editar</a>
                                     </td> 
                                     <td>
-                                       <a class="btn btn-success table-btn" asp-page="./IngresarMedico" >Ingresar</a>
+                                       <a class="btn btn-success table-btn" asp-page="./IngresarMascota" >Ingresar</a>
                                     </td> 
                                 </tr>
                               }
@@ -95,4 +107,3 @@
         $("#btnActualizar").css('display','block');
     }*/
 </script>
-

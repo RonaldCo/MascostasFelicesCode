@@ -1,0 +1,69 @@
+﻿@page
+@model MascotaEpets.app.Presentacion.Pages.BuscarMascotaModel
+@{
+}
+<div class="row">
+    <div class="col-lg col-md col">
+        <div class="card">
+            <div class="card-header bg-dark bg-gradient text-light">
+              <h3>Medicos</h3>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Color de Ojos</th>
+                            <th>Color de Piel</th>
+                            <th>Temperatura</th>
+                            <th>Peso</th>
+                            <th>Frecuencia Respiratoria</th>
+                            <th>Frecuencia Cardiaca</th>
+                            <th>EstadoAnimo</th>
+                        </tr>
+                    </thead>
+                    <tbody>   
+                             <tr>
+                                    <td>
+                                        @Model.mascota.IdMascota
+                                    </td>
+                                    <td>
+                                        @Model.mascota.Nombre
+                                    </td>
+                                    <td>
+                                        @Model.mascota.ColorOjos
+                                    </td>
+                                    <td>
+                                        @Model.mascota.ColorPiel
+                                    </td>
+                                    <td>
+                                        @Model.mascota.Temperatura
+                                    </td>
+                                    <td>
+                                        @Model.mascota.Peso
+                                    </td>
+                                     <td>
+                                        @Model.mascota.FrecuenciaRespiratoria
+                                    </td>
+                                    <td>
+                                        @Model.mascota.FrecuenciaCardiaca
+                                    </td>
+                                    <td>
+                                        @Model.mascota.EstadoAnimo
+                                    </td>
+                                    <td>
+                                       <a asp-page="./ListaMascota" class="btn btn-primary">Regresar</a>
+                                    </td> 
+                                    
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+    
+</div>
