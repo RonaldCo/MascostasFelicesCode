@@ -78,3 +78,4 @@ C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Propietario\ListaPropietarios.cshtml.g.cs
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Propietario\IngresarPropietarios.cshtml.g.cs
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Propietario\BuscarPropietario.cshtml.g.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Propietario\ActualizarPropietario.cshtml.g.cs

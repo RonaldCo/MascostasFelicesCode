@@ -14,5 +14,6 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
          PropietarioMascota ActualizarPropietario(PropietarioMascota ObjPropietario);
 
         PropietarioMascota IngresarPropietario(PropietarioMascota ObjPropietario);
+        //bool BorrarPropietario(int IdPropietario);
     }
 }
