@@ -1,0 +1,87 @@
+﻿@page
+@model MascotaEpets.app.Presentacion.Pages.ListaEmpresaModel
+@{
+}
+<div class="row">
+    <div class="col-lg col-md col">
+        <div class="card">
+            <div class="card-header bg-dark bg-gradient text-light">
+              <h3>Lista de Empresas</h3>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Razon Social</th>
+                            <th>NIt</th>
+                            <th>Direccion</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         @foreach (var item in Model.empresa)
+                              {  
+                                <tr>
+                                    <td>
+                                        @item.IdEmpresa
+                                    </td>
+                                    <td>
+                                        @item.NombreEmpresa
+                                    </td>
+                                    <td>
+                                        @item.Nit
+                                    </td>
+                                    <td>
+                                        @item.Direccion
+                                    </td> 
+                                    <td>
+                                       <a class="btn btn-primary table-btn" asp-page="./BuscarEmpresa" asp-route-IdEmpresa="@item.IdEmpresa">Buscar</a>
+                                    </td> 
+                                    <td>
+                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarEmpresa" asp-route-IdEmpresa="@item.IdEmpresa">Editar</a>
+                                    </td> 
+                                    <td>
+                                       <a class="btn btn-success table-btn" asp-page="./IngresarEmpresa" >Ingresar</a>
+                                    </td> 
+                                </tr>
+                              }
+                    </tbody>
+                    
+                </table>
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script>
+   /* function MensajeEliminar(){
+
+    confirm("¿Estas Seguro de Eliminar el registro? ");
+
+
+    function MensajeActualizar(){
+
+      confirm("¿Estas Seguro de Actualizar el registro? ");
+
+    }
+}
+
+    function LimpiarDatos(){
+
+        $("#Nombre").val('');
+        $("#btnIngresar").css('display','block');
+        $("#btnActualizar").css('display','none');
+    }
+
+     function CargarActualizar(){
+
+        $("#Nombre").val(Nombre);
+        $("#Tarjeta").val('');
+        $("#btnIngresar").css('display','none');
+        $("#btnActualizar").css('display','block');
+    }*/
+</script>

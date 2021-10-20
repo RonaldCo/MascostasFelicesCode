@@ -1,0 +1,49 @@
+﻿@page
+@model MascotaEpets.app.Presentacion.Pages.BuscarEmpresaModel
+@{
+}
+<div class="row">
+    <div class="col-lg col-md col">
+        <div class="card">
+            <div class="card-header bg-dark bg-gradient text-light">
+              <h3>Empresa</h3>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Razon Social</th>
+                            <th>Nit</th>
+                            <th>Direccion</th>
+                        </tr>
+                    </thead>
+                    <tbody>   
+                             <tr>
+                                    <td>
+                                        @Model.empresa.IdEmpresa
+                                    </td>
+                                    <td>
+                                        @Model.empresa.NombreEmpresa
+                                    </td>
+                                    <td>
+                                        @Model.empresa.Nit
+                                    </td>
+                                    <td>
+                                        @Model.empresa.Direccion
+                                    </td>
+                                    <td>
+                                       <a asp-page="./ListaEmpresa" class="btn btn-primary">Regresar</a>
+                                    </td> 
+                                    
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+    
+</div>

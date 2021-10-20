@@ -83,3 +83,7 @@ C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Mascotas\ActualizarMascota.cshtml.g.cs
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Mascotas\BuscarMascota.cshtml.g.cs
 C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Mascotas\IngresarMascota.cshtml.g.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Empresa\ActualizarEmpresa.cshtml.g.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Empresa\BuscarEmpresa.cshtml.g.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Empresa\IngresarEmpresa.cshtml.g.cs
+C:\ProyectoMascota\MascotaEpets.app\MascotaEpets.app.Presentacion\obj\Debug\net5.0\Razor\Pages\Empresa\ListaEmpresa.cshtml.g.cs

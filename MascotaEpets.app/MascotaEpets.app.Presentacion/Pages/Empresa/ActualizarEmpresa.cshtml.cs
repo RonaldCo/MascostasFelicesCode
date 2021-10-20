@@ -9,25 +9,25 @@ using MascotaEpets.app.Dominio;
 
 namespace MascotaEpets.app.Presentacion.Pages
 {
-    public class ActualizarMascotaModel : PageModel
+    public class ActualizarEmpresaModel : PageModel
     {
-        // Variable de tipo Interface
-        private readonly IRepositorioMascota repositorio;
+         // Variable de tipo Interface
+        private readonly IRepositorioEmpresa repositorio;
         
         [BindProperty]
 
-        public MascotaEpets.app.Dominio.Mascota mascota{get;set;}
+        public MascotaEpets.app.Dominio.Empresa empresa{get;set;}
 
-        public ActualizarMascotaModel(IRepositorioMascota repositorio){
+        public ActualizarEmpresaModel(IRepositorioEmpresa repositorio){
 
             this.repositorio=repositorio;
 
         } 
-        public IActionResult OnGet(int IdMascota)
+        public IActionResult OnGet(int IdEmpresa)
         {
-              mascota=repositorio.BuscarMascotaId(IdMascota);
+            empresa=repositorio.BuscarEmpresa(IdEmpresa);
 
-            if (mascota==null)
+            if (empresa==null)
             {
                return RedirectToPage("./PaginaNoEncontrada") ;
             }
@@ -37,16 +37,16 @@ namespace MascotaEpets.app.Presentacion.Pages
             }
         }
 
-        public IActionResult OnPost()
+         public IActionResult OnPost()
         {
-            mascota=repositorio.ActualizarMascota(mascota);
-              if (mascota==null)
+           empresa=repositorio.ActualizarEmpresa(empresa);
+              if (empresa==null)
             {
                return RedirectToPage("./PaginaNoEncontrada") ;
             }
             else{
 
-                return RedirectToPage("./ListaMascotas") ;
+                return RedirectToPage("./ListaEmpresa") ;
             
                 }
          }
