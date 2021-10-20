@@ -4,14 +4,16 @@ using MascotaEpets.app.Persistencia.AppData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MascotaEpets.app.Persistencia.Migrations
 {
     [DbContext(typeof(EfAppContext))]
-    partial class EfAppContextModelSnapshot : ModelSnapshot
+    [Migration("20211020202120_inicial_nueva2")]
+    partial class inicial_nueva2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -217,40 +219,6 @@ namespace MascotaEpets.app.Persistencia.Migrations
                     b.ToTable("PropietariosDb");
                 });
 
-            modelBuilder.Entity("MascotaEpets.app.Dominio.RegistroMedico", b =>
-                {
-                    b.Property<int>("IdRegistroMedico")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("IdRegistroM")
-                        .UseIdentityColumn();
-
-                    b.Property<DateTime>("FechaAtencion")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("FechaAtencion");
-
-                    b.Property<int?>("IdMedico")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Medicamentos")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)")
-                        .HasColumnName("Medicamentos");
-
-                    b.Property<string>("Recomendaciones")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("Recomendaciones");
-
-                    b.HasKey("IdRegistroMedico");
-
-                    b.HasIndex("IdMedico");
-
-                    b.ToTable("RegistroMedicoDb");
-                });
-
             modelBuilder.Entity("MascotaEpets.app.Dominio.TipoAnimal", b =>
                 {
                     b.Property<int>("IdAnimal")
@@ -301,15 +269,6 @@ namespace MascotaEpets.app.Persistencia.Migrations
                         .HasForeignKey("IdMascota");
 
                     b.Navigation("Mascota");
-                });
-
-            modelBuilder.Entity("MascotaEpets.app.Dominio.RegistroMedico", b =>
-                {
-                    b.HasOne("MascotaEpets.app.Dominio.MedicoVeterinario", "MedicoVeterinario")
-                        .WithMany()
-                        .HasForeignKey("IdMedico");
-
-                    b.Navigation("MedicoVeterinario");
                 });
 #pragma warning restore 612, 618
         }

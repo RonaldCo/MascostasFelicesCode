@@ -15,7 +15,7 @@ namespace MascotaEpets.app.Persistencia.AppData
 
         public DbSet<PropietarioMascota> propietarioMascota { get; set; }
 
-        //public DbSet<RegistroMedico> registroMedico { get; set; }
+        public DbSet<RegistroMedico> registroMedico { get; set; }
 
         //public DbSet<SignoVital> signoVital { get; set; }
         
