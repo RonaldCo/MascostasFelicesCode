@@ -30,23 +30,24 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         //Borrar Medico
 
 
-        /*public bool BorrarMedico(int IdMedico){
+        public  MedicoVeterinario BorrarMedico(int IdMedico){
 
           
                 using (AppData.EfAppContext contexto= new AppData.EfAppContext()){
                
-                var BuscarMedico=(from p in contexto.medicoVeterinario where p.IdPersona ==IdPersona select p);
+                //var BuscarMedico=(from p in contexto.medicoVeterinario where p.Id==IdMedico.Id select p);
+                var BuscarMedico=contexto.medicoVeterinario.SingleOrDefault(s=>s.Id==IdMedico);
                 if(!(BuscarMedico==null)) {
                     contexto.medicoVeterinario.Remove(BuscarMedico);
                     contexto.SaveChanges();
-                    valorRetorno=true;
+                    
 
                 }
-                return valorRetorno;
+                return BuscarMedico;
              
             }
         
-        }*/
+        }
         
        /// <summary>
        /// Ejemplo de documentacion de actualizar EL Medico Veterinario

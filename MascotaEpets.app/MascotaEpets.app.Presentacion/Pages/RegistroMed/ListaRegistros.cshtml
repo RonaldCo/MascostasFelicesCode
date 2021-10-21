@@ -1,61 +1,51 @@
 ﻿@page
-@model MascotaEpets.app.Presentacion.Pages.ListadoMedicosModel
+@model MascotaEpets.app.Presentacion.Pages.ListaRegistrosModel
 @{
 }
 <div class="row">
     <div class="col-lg col-md col">
         <div class="card">
             <div class="card-header bg-dark bg-gradient text-light">
-              <h3>Lista de Medicos</h>
+              <h3>Lista De Registros Medicos</h3>
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombres</th>
-                            <th>Apellidos</th>
-                            <th>Cedula</th>
-                            <th>Telefono</th>
-                            <th>Tarjeta Profesional</th>
-                            
-                        </tr>
+                            <th>Recomendaciones</th>
+                            <th>Fecha de Atencion</th>
+                            <th>Medicamentos</th>
+                         </tr>
                     </thead>
                     <tbody>
-                         @foreach (var item in Model.Medicos)
+                         @foreach (var item in Model.registro)
                               {  
                                 <tr>
                                     <td>
-                                        @item.Id
+                                        @item.IdRegistroMedico
                                     </td>
                                     <td>
-                                        @item.Nombres
+                                        @item.Recomendaciones
                                     </td>
                                     <td>
-                                        @item.Apellidos
+                                        @item.FechaAtencion
                                     </td>
                                     <td>
-                                        @item.Cedula
-                                    </td>
-                                    <td>
-                                        @item.Telefono
-                                    </td>
-                                    <td>
-                                        @item.TarjetaProfesional
-                                    </td>
-                                    
-                                    <td>
-                                       <a class="btn btn-primary table-btn" asp-page="./BuscarMedico" asp-route-IdMedico="@item.Id">Buscar</a>
+                                        @item.Medicamentos
                                     </td> 
                                     <td>
-                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarMedicos" asp-route-IdMedico="@item.Id">Editar</a>
+                                       <a class="btn btn-primary table-btn" asp-page="./BuscarRegistro" asp-route-IdRegistroMedico="@item.IdRegistroMedico">Buscar</a>
                                     </td> 
                                     <td>
-                                       <a class="btn btn-success table-btn" asp-page="./IngresarMedico" >Ingresar</a>
+                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarRegistro" asp-route-IdRegistroMedico="@item.IdRegistroMedico">Editar</a>
                                     </td> 
                                     <td>
+                                       <a class="btn btn-success table-btn" asp-page="./IngresarRegistro" >Ingresar</a>
+                                    </td>
+                                     <td>
                                        <a class="btn btn-danger table-btn" asp-page="" >Eliminar</a>
-                                    </td> 
+                                    </td>
                                 </tr>
                               }
                     </tbody>
@@ -63,9 +53,11 @@
                 </table>
 
             </div>
-            <div class="card bg-dark bg-gradient text-light">
-                <div class="card-footer"></div>
-            </div>
+            
+                    <div class="card bg-dark bg-gradient text-light">
+                        <div class="card-footer"></div>
+                    </div>
+        
         </div>
     </div>
     
@@ -98,4 +90,3 @@
         $("#btnActualizar").css('display','block');
     }*/
 </script>
-

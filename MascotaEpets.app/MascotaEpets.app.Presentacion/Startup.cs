@@ -31,6 +31,7 @@ namespace MascotaEpets.app.Presentacion
             services.AddSingleton<IRepositorioPropietario,RepositorioPropietario>();
             services.AddSingleton<IRepositorioMascota,RepositorioMascota>();
             services.AddSingleton<IRepositorioEmpresa,RepositorioEmpresa>();
+            services.AddSingleton<IRepositorioRegistroMed,RepositorioRegistroMed>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

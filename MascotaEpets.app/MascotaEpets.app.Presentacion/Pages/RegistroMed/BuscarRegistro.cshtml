@@ -1,39 +1,41 @@
 ﻿@page
-@model MascotaEpets.app.Presentacion.Pages.BuscarEmpresaModel
+@model MascotaEpets.app.Presentacion.Pages.BuscarRegistroModel
 @{
 }
 <div class="row">
     <div class="col-lg col-md col">
         <div class="card">
             <div class="card-header bg-dark bg-gradient text-light">
-              <h3>Empresa</h3>
+              <h2>Registro Medico</h2>
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Razon Social</th>
-                            <th>Nit</th>
-                            <th>Direccion</th>
+                            <th>Recomendaciones</th>
+                            <th>Fecha de Atencion</th>
+                            <th>Medicamentos</th>
                         </tr>
                     </thead>
                     <tbody>   
                              <tr>
                                     <td>
-                                        @Model.empresa.IdEmpresa
+                                        @Model.registro.IdRegistroMedico
                                     </td>
                                     <td>
-                                        @Model.empresa.NombreEmpresa
+                                        @Model.registro.Recomendaciones
                                     </td>
                                     <td>
-                                        @Model.empresa.Nit
+                                        @Model.registro.FechaAtencion
                                     </td>
                                     <td>
-                                        @Model.empresa.Direccion
+                                        @Model.registro.Medicamentos
                                     </td>
                                     <td>
-                                       <a asp-page="./ListaEmpresa" class="btn btn-primary">Regresar</a>
+                                    </td>
+                                    <td>
+                                       <a asp-page="./ListaRegistros" class="btn btn-primary">Regresar</a>
                                     </td> 
                                     
                                 </tr>

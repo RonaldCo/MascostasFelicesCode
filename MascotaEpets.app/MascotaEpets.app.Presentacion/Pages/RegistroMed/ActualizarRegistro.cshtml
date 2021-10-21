@@ -1,0 +1,44 @@
+﻿@page
+@model MascotaEpets.app.Presentacion.Pages.ActualizarRegistroModel
+@{
+}
+<div class="card-header bg-dark bg-gradient text-light">
+<h3>Actualizar Registros</h3>
+</div>
+<form method="post">    
+    <div class="form-group">
+        <label asp-for="registro.Recomendaciones"></label>
+        <input id="recomendaciones" type="text" asp-for="registro.Recomendaciones" class="form-control" placeholder="Ingrese Nombres"/>
+        <input id="Id" type="hidden" asp-for="registro.IdRegistroMedico" class="form-control" placeholder="Ingrese Nombres"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="registro.FechaAtencion"></label>
+        <input id="fecha" type="text" asp-for="registro.FechaAtencion" class="form-control" placeholder="Ingrese Apellidos"/>
+    </div>
+     <div class="form-group">
+        <label asp-for="registro.Medicamentos"></label>
+        <input id="medicamento" type="text" asp-for="registro.Medicamentos" class="form-control" placeholder="Ingrese Cedula"/>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" onclick="Actualizado()">Guardar Cambios</button>
+        
+       
+    </div>
+</form>
+<button id="Cancelar" onclick="LimpiarForm();" type="submit"  class="btn btn-danger">Cancelar</button>
+<a asp-page="./ListaRegistros" class="btn btn-primary">Regresar</a>
+<script>
+
+        function LimpiarForm(){
+
+            $("#recomendaciones").val('');
+            $("#fecha").val('');
+            $("#medicamento").val('');
+        }
+
+        function Actualizado(){
+
+            confirm("Registro Actualizado,con exito");
+        }
+
+</script>

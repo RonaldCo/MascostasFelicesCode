@@ -14,7 +14,7 @@ namespace MascotaEpets.app.Persistencia.AppRepositorios
         MedicoVeterinario IngresarMedico(MedicoVeterinario ObjMedico);
 
         //Firma del Metodo para Eliminar un Medico
-        //bool BorrarMedico(int IdMedico);
+        MedicoVeterinario BorrarMedico(int IdMedico);
 
         //Firma del Metodo para Actualizar Datos
         //MedicoVeterinario ActualizarMedico(int IdMedico,string Nombres,string Apellidos,string TarjetaProfesional);

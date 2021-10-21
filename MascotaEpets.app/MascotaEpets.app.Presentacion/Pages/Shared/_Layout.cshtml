@@ -3,22 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Mascota Epets</title>
+    <title>@ViewData["Title"] Mascota Epets</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
+      <div> 
         <nav Id="navega" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3" >
-            <div class="container-fluid">
-                <div class="navbar-brand" href="index.html">
-                    <img src="~/img/MascotasFelizPets.png" width="48" class="img-fluid" title="title" alt="additional title" />
-                </div>
+            <div class="navbar-brand" href="index.html">
+                <img src="~/img/MascotasFelizPets.png" width="48" class="img" title="title" alt="additional title" />
+            </div>
+            <div>
+                <h1 class="mt-1" style="color: white; text-align-last: auto;" >Mascotas Epets</h1>
+            </div>
+            <div class="container">
                 <div>
-                    <h1 class="mt-1" style="color: white; text-align-last: auto;" >Mascotas Epets</h1>
-                </div>
-                <div>
-                    <a class="navbar-brand" asp-area="" asp-page="/Index">Inicio</a>
+                   
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,39 +27,44 @@
                 </div>
                 
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-white text-center " asp-area="" asp-page="/Medicos/ListadoMedicos" >Medicos </a>
+                    <ul class="navbar-nav flex-grow-1 text-center" >
+                          <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" asp-area="" asp-page="/Propietario/ListaPropietarios">Propietarios</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Medicos/ListadoMedicos" >Medicos </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" asp-area="" asp-page="/Mascotas/ListaMascotas">Mascota</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Propietario/ListaPropietarios">Propietarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" asp-area="" asp-page="/Empresa/ListaEmpresa">Empresa</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Mascotas/ListaMascotas">Mascota</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" asp-area="" asp-page="/RegistroMed/ListaRegistro">Registro</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Empresa/ListaEmpresa">Empresa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" asp-area="" asp-page="/Solicitud/ListaSolicitud">Solicitud</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/RegistroMed/ListaRegistros">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Solicitud/ListaSolicitud">Solicitud</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+
+  </div>   
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted bg-dark">
         <div class="container">
-            &copy; 2021 - MascotaEpets.app.Presentacion - <a asp-area="" asp-page="/Privacy">Privacidad</a>
+            &copy; 2021 - MascotaEpets Epets - <a asp-area="" asp-page="/Privacy">Privacidad</a>
         </div>
     </footer>
 
@@ -68,4 +74,6 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
+
 </html>

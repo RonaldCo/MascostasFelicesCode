@@ -1,0 +1,47 @@
+﻿@page
+@model MascotaEpets.app.Presentacion.Pages.IngresarRegistroModel
+@{
+}
+<div class="card bg-dark bg-gradient text-light">
+<h3>Registro Nuevo</h3>
+</div>
+ <form method="post">
+<div class="form-group">
+        <label asp-for="registro.Recomendaciones"></label>
+        <input id="recomendaciones" type="text" asp-for="registro.Recomendaciones" class="form-control" placeholder="Recomendaciones"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="registro.FechaAtencion"></label>
+        <input id="fecha" type="text" asp-for="registro.FechaAtencion" class="form-control" placeholder="Fecha"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="registro.Medicamentos"></label>
+        <input id="medicamentos" type="text" asp-for="registro.Medicamentos" class="form-control" placeholder="Medicamentos"/>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>  
+</form>
+<button id="Cancelar" onclick="LimpiarForm()" type="submit" class="btn btn-danger">Cancelar</button>
+
+<a asp-page="./ListaRegistros" class="btn btn-primary">Regresar</a>       
+<script>
+
+        function LimpiarForm(){
+
+            $("#recomendaciones").val('');
+            $("#fecha").val('');
+            $("#medicamentos").val('');
+        }
+
+        $( function() {
+             $("#fecha").datepicker({
+
+                 changeMonth:true,
+                 changeYear:true,
+                       });
+           } );
+
+</script>
+
