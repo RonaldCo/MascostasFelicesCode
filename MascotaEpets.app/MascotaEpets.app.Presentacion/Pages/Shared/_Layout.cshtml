@@ -17,7 +17,7 @@
             <div>
                 <h1 class="mt-1" style="color: white; text-align-last: auto;" >Mascotas Epets</h1>
             </div>
-            <div class="container">
+            <div class="container" >
                 <div>
                    
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -26,28 +26,28 @@
                     </button>
                 </div>
                 
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1 text-center" >
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between " style="text-justify">
+                    <ul class="nav nav-tabs card-header-tabs" >
                           <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Index">Inicio</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Index"><img src="~/img/home.png" width="24"  class="img"/>Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Medicos/ListadoMedicos" >Medicos </a>
+                            <a class="nav-link text-white"  asp-area="" asp-page="/Medicos/ListadoMedicos"><img src="~/img/vete2.png" width="24"  class="img"/>Medicos </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Propietario/ListaPropietarios">Propietarios</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Propietario/ListaPropietarios"><img src="~/img/dueñomascota.png" width="24"  class="img"/>Propietarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Mascotas/ListaMascotas">Mascota</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Mascotas/ListaMascotas"><img src="~/img/icons8-bulldog-64.png" width="24"  class="img"/>Mascota</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Empresa/ListaEmpresa">Empresa</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Empresa/ListaEmpresa"><img src="~/img/icons8-shop-16.png" width="24"  class="img"/>Empresa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/RegistroMed/ListaRegistros">Registro</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/RegistroMed/ListaRegistros"><img src="~/img/registro.png" width="24"  class="img"/>Registro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Solicitud/ListaSolicitud">Solicitud</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Solicitud/ListaSolicitud"><img src="~/img/solicitud.png" width="24"  class="img"/>Solicitud</a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +56,7 @@
     </header>
 
   </div>   
-    <div class="container-fluid">
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

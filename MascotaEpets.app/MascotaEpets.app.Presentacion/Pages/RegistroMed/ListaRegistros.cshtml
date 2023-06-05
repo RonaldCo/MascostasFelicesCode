@@ -35,16 +35,16 @@
                                         @item.Medicamentos
                                     </td> 
                                     <td>
-                                       <a class="btn btn-primary table-btn" asp-page="./BuscarRegistro" asp-route-IdRegistroMedico="@item.IdRegistroMedico">Buscar</a>
+                                       <a class="btn btn-primary table-btn" asp-page="./BuscarRegistro" asp-route-IdRegistroMedico="@item.IdRegistroMedico"><img src="~/img/buscar.png" width="24"  class="img"/>Buscar</a>
                                     </td> 
                                     <td>
-                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarRegistro" asp-route-IdRegistroMedico="@item.IdRegistroMedico">Editar</a>
+                                       <a class="btn btn-warning table-btn" asp-page="./ActualizarRegistro" asp-route-IdRegistroMedico="@item.IdRegistroMedico">Editar<img src="~/img/ActualizarRegistro.png" width="24" title="Actualizar Registro" class="img"/></a>
                                     </td> 
                                     <td>
-                                       <a class="btn btn-success table-btn" asp-page="./IngresarRegistro" >Ingresar</a>
+                                       <a class="btn btn-success table-btn" asp-page="./IngresarRegistro" ><img src="~/img/solicitud.png" width="24"  class="img"/>Ingresar</a>
                                     </td>
                                      <td>
-                                       <a class="btn btn-danger table-btn" asp-page="" >Eliminar</a>
+                                       <a class="btn btn-danger table-btn" asp-page="" ><img src="~/img/eliminar.png" width="24"  class="img"/>Eliminar</a>
                                     </td>
                                 </tr>
                               }
